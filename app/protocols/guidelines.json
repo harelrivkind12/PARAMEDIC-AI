@@ -1,0 +1,228 @@
+{
+  "metadata": {
+    "last_updated": "2026-05-18",
+    "version": "1.0.0",
+    "source": "MDA_Emergency_Protocols_v2026"
+  },
+  "protocols": [
+    {
+      "protocol_id": "TRAUMA_01",
+      "name": "Hemorrhagic Shock / Massive Bleeding",
+      "archetype_triggers": ["Penetrating Trauma", "Blunt Trauma", "Multi-System Trauma", "Blast Injury"],
+      "clinical_triggers": ["Active bleeding", "Pale skin", "Sweaty", "Altered mental status"],
+      "vital_thresholds": {
+        "systolic_bp_max": 90,
+        "shock_index_min": 1.0
+      },
+      "immediate_actions": [
+        "Perform hemorrhage control (Tourniquet/Hemostatic dressing/Direct pressure).",
+        "Airway management with high-flow oxygen.",
+        "Establish IV/IO access.",
+        "Prevent hypothermia.",
+        "Rapid transport."
+      ],
+      "medications": [
+        {
+          "name": "Hexakapron (TXA)",
+          "dosage": 1.0,
+          "unit": "gram",
+          "route": "IV",
+          "special_instructions": "Push slowly over 10 minutes."
+        },
+        {
+          "name": "Hartmann's Solution",
+          "dosage": 250.0,
+          "unit": "ml",
+          "route": "IV",
+          "special_instructions": "Permissive Hypotension: only until radial pulse returns."
+        }
+      ],
+      "contraindications_and_warnings": ["Avoid over-resuscitation with fluids.", "Check for Tension Pneumothorax if refractory."]
+    },
+    {
+      "protocol_id": "RESUS_01",
+      "name": "Adult Cardiac Arrest",
+      "archetype_triggers": ["Medical Emergency"],
+      "clinical_triggers": ["Unresponsive", "No pulse", "Apneic"],
+      "vital_thresholds": {"heart_rate": 0},
+      "immediate_actions": [
+        "High-quality CPR (100-120 bpm).",
+        "Defibrillator analysis.",
+        "Airway management (BVM).",
+        "IV/IO access.",
+        "Shock (if VF/VT)."
+      ],
+      "medications": [
+        {
+          "name": "Epinephrine 1:10,000",
+          "dosage": 1.0,
+          "unit": "mg",
+          "route": "IV/IO",
+          "special_instructions": "Repeat every 3-5 mins."
+        },
+        {
+          "name": "Amiodarone",
+          "dosage": 300.0,
+          "unit": "mg",
+          "route": "IV/IO",
+          "special_instructions": "Refractory VF/VT only."
+        }
+      ],
+      "contraindications_and_warnings": ["Minimize CPR interruptions.", "Check reversible causes (H's and T's)."]
+    },
+    {
+      "protocol_id": "RESP_02",
+      "name": "General Respiratory Distress",
+      "archetype_triggers": ["Medical Emergency"],
+      "clinical_triggers": ["Tachypnea", "Accessory muscle use", "Tripod position", "Wheezing"],
+      "vital_thresholds": {"spo2_max": 94},
+      "immediate_actions": [
+        "Upright position.",
+        "High-flow oxygen.",
+        "Capnography (EtCO2).",
+        "Auscultate lungs."
+      ],
+      "medications": [
+        {
+          "name": "Salbutamol (Ventolin)",
+          "dosage": 5.0,
+          "unit": "mg",
+          "route": "Inhalation",
+          "special_instructions": "Nebulized."
+        }
+      ],
+      "contraindications_and_warnings": ["Avoid fluid boluses if CHF suspected.", "Use caution with high O2 in COPD."]
+    },
+    {
+      "protocol_id": "CARD_01",
+      "name": "General Cardiac Approach / ACS",
+      "archetype_triggers": ["Medical Emergency"],
+      "clinical_triggers": ["Chest pain", "Diaphoresis", "Radiation to jaw/arm"],
+      "vital_thresholds": {"systolic_bp_min": 90},
+      "immediate_actions": [
+        "Position of comfort.",
+        "12-lead ECG within 10 mins.",
+        "IV access.",
+        "Oxygen if SpO2 <94%."
+      ],
+      "medications": [
+        {
+          "name": "Aspirin",
+          "dosage": 300.0,
+          "unit": "mg",
+          "route": "PO",
+          "special_instructions": "Chewable."
+        },
+        {
+          "name": "Nitroglycerin",
+          "dosage": 0.4,
+          "unit": "mg",
+          "route": "SL",
+          "special_instructions": "Monitor BP before each dose."
+        }
+      ],
+      "contraindications_and_warnings": ["Contraindicated if ED meds used recently.", "ECG does not rule out MI."]
+    },
+    {
+    "protocol_id": "TRAUMA_02",
+    "name": "Hemorrhagic Shock Management",
+    "archetype_triggers": ["Penetrating Trauma", "Blunt Trauma", "Multi-System Trauma"],
+    "clinical_triggers": ["Hypotension", "Tachycardia", "Narrow pulse pressure", "Altered mental status"],
+    "vital_thresholds": {"systolic_bp_max": 90, "shock_index_min": 1.0},
+    "immediate_actions": [
+        "Immediate hemorrhage control (Tourniquet/Packing).",
+        "Airway and breathing assessment.",
+     "Establish two large-bore IV lines or IO access.",
+     "Monitor vital signs continuously.",
+     "Permissive hypotension approach until major hemorrhage controlled."
+     ],
+     "medications": [
+    {
+      "name": "TXA (Tranexamic Acid)",
+      "dosage": 1.0,
+      "unit": "gram",
+      "route": "IV",
+      "special_instructions": "Administer within 3 hours of injury."
+    }
+     ],
+     "contraindications_and_warnings": ["Avoid over-aggressive fluid resuscitation (coagulopathy risk)."]
+    },
+     {
+     "protocol_id": "MED_02",
+     "name": "Anaphylaxis Management",
+     "archetype_triggers": ["Medical Emergency"],
+     "clinical_triggers": ["Urticaria", "Angioedema", "Respiratory distress", "Hypotension"],
+     "vital_thresholds": {"systolic_bp_max": 90},
+     "immediate_actions": [
+       "Identify and remove allergen.",
+       "Position in supine with legs elevated.",
+       "Establish IV access.",
+       "Monitor airway status closely."
+     ],
+     "medications": [
+       {
+         "name": "Epinephrine 1:1000",
+         "dosage": 0.3,
+         "unit": "mg",
+         "route": "IM",
+         "special_instructions": "Repeat every 5-15 mins if no clinical improvement."
+       },
+       {
+         "name": "Diphenhydramine",
+         "dosage": 50.0,
+         "unit": "mg",
+         "route": "IV",
+         "special_instructions": "H1 receptor antagonist."
+       }
+     ],
+     "contraindications_and_warnings": ["Epinephrine is first-line; do not delay."]
+    },
+     {
+     "protocol_id": "TRAUMA_03",
+     "name": "Adult Burn Injury Management",
+     "archetype_triggers": ["Burn Injury"],
+     "clinical_triggers": ["Full/Partial thickness burns", "Inhalation injury signs"],
+     "vital_thresholds": {},
+     "immediate_actions": [
+       "Stop the burning process.",
+       "Cover burns with dry, clean dressings.",
+       "Assess for inhalation injury (soot, singed hair, stridor).",
+       "Monitor EtCO2 if inhalation suspected.",
+       "Calculate fluid needs based on Rule of Nines."
+     ],
+     "medications": [
+       {
+         "name": "Fentanyl",
+         "dosage": 50.0,
+         "unit": "mcg",
+         "route": "IV",
+         "special_instructions": "For analgesic control, titrated to effect."
+       }
+     ],
+     "contraindications_and_warnings": ["Do not apply ice (hypothermia risk).", "Prioritize Airway in facial burns."]
+    },
+    {
+     "protocol_id": "CARD_02",
+     "name": "General Arrhythmia Management",
+     "archetype_triggers": ["Medical Emergency"],
+     "clinical_triggers": ["Palpitations", "Syncope/Presyncope", "Chest pain", "Hypotension"],
+     "vital_thresholds": {"systolic_bp_max": 90},
+     "immediate_actions": [
+       "Assess hemodynamic stability.",
+       "Obtain 12-lead ECG.",
+       "If hemodynamically unstable: Synchronized Cardioversion.",
+       "If stable: Vagal maneuvers / Pharmacological rate control."
+     ],
+     "medications": [
+       {
+         "name": "Adenosine",
+         "dosage": 6.0,
+         "unit": "mg",
+         "route": "IV",
+         "special_instructions": "Rapid IV push, follow with 20ml flush. May increase to 12mg."
+       }
+     ],
+     "contraindications_and_warnings": ["Synchronized cardioversion requires sedation if patient conscious.", "Caution with Beta-Blockers in bradycardia."]
+     }
+  ]
+}
