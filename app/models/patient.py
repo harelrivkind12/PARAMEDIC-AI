@@ -29,7 +29,15 @@ class PatientStatus(BaseModel):
          json_schema_extra={"example": 45}
     )
 
-    #Medical history
+    # Psychological status
+    weight: float = Field(
+        ...,
+        gt=0,
+        description="Patient's estimated weight in kilograms, crucial for accurate medication dosing and fluid management.",
+        json_schema_extra={"example": 70.5}
+    )
+
+    # Medical history
     chronic_conditions: List[Literal[
         "Heart Failure (CHF)",          
         "Chronic Kidney Disease (CKD)", 

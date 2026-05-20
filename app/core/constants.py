@@ -20,7 +20,7 @@ PLATINUM_TEN_MINUTES = 10
 
 # Reassessment buffers
 # Minimum minutes before evaluating the effect of an IV/IO medication (e.g., Fentanyl)
-MIN_IV_MED_REASSESSMENT_MINUTES = 5
+MIN_IV_MED_REASSESSMENT_MINUTES = 2
 
 
 # ==========================================
@@ -37,8 +37,23 @@ SHOCK_INDEX_CRITICAL_THRESHOLD = 1.0
 # 4. Demographic & Safety Buffers
 # ==========================================
 # Age thresholds affecting protocol selection and medication dosages
-PEDIATRIC_AGE_THRESHOLD = 18
+INFANT_AGE_THRESHOLD = 1
+PEDIATRIC_AGE_THRESHOLD = 14
 GERIATRIC_AGE_THRESHOLD = 65
+
+
+# Max HR thresholds for different age groups 
+MAX_HR_ADULT = 100
+MAX_HR_PEDIATRIC = 140
+MAX_HR_INFANT = 160
+
+#Respiratory Rate thresholds for different age groups
+MAX_RR_ADULT = 20
+MAX_RR_PEDIATRIC = 30
+
+# Minimum Systolic BP thresholds for different age groups
+MIN_SBP_ADULT = 90
+MIN_SBP_PEDIATRIC = 70  # This is a general threshold; actual minimum SBP varies with age and weight in pediatrics
 
 # Glasgow Coma Scale (GCS)
 # GCS of 8 or below triggers immediate airway management ("Less than 8, intubate")
@@ -50,3 +65,4 @@ CRITICAL_GCS_THRESHOLD = 8
 # ==========================================
 # If an administered dose is within this percentage of the MAX allowed dose, trigger a warning
 MAX_DOSE_WARNING_BUFFER_PERCENT = 10
+
