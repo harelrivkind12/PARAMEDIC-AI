@@ -4,12 +4,556 @@
     "version": "1.0.0",
     "source": "MDA_Emergency_Protocols_v2026"
   },
+  "medication_rules": {
+    "Ketamine": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO",
+        "IM",
+        "IN"
+      ],
+      "max_single_dose": 250.0,
+      "indications": [
+        "Severe pain",
+        "Induction for intubation",
+        "Agitation"
+      ],
+      "contraindications_flags": [
+        "Severe Neurological Impairment (Low GCS)",
+        "Suspected TBI"
+      ]
+    },
+    "Adrenaline (Epinephrine)": {
+      "allowed_units": [
+        "mg",
+        "mcg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO",
+        "IM"
+      ],
+      "max_single_dose": 1.0,
+      "indications": [
+        "Cardiac Arrest",
+        "Anaphylaxis",
+        "Severe Respiratory Distress"
+      ],
+      "contraindications_flags": [
+        "CHF",
+        "Severe Tachycardia",
+        "Recent MI"
+      ]
+    },
+    "Hexakapron (TXA)": {
+      "allowed_units": [
+        "g",
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 1000.0,
+      "indications": [
+        "Hemorrhagic Shock",
+        "Massive Bleeding"
+      ],
+      "contraindications_flags": [
+        "Time since incident > 3 hours"
+      ]
+    },
+    "Fentanyl": {
+      "allowed_units": [
+        "mcg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 200.0,
+      "indications": [
+        "Analgesic control",
+        "Burn Injury",
+        "Severe pain"
+      ],
+      "contraindications_flags": [
+        "Hypotension (Decompensated)",
+        "Severe Neurological Impairment (Low GCS)"
+      ]
+    },
+    "Midazolam": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 10.0,
+      "indications": [
+        "Seizures",
+        "Sedation",
+        "Cardioversion sedation"
+      ],
+      "contraindications_flags": [
+        "Hypotension (Decompensated)"
+      ]
+    },
+    "Atropine": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 1.0,
+      "indications": [
+        "Symptomatic Bradycardia",
+        "Organophosphate poisoning"
+      ],
+      "contraindications_flags": []
+    },
+    "Lidocaine": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 100.0,
+      "indications": [
+        "Refractory VF/VT",
+        "Alternative to Amiodarone"
+      ],
+      "contraindications_flags": [
+        "Bradycardia",
+        "High-degree heart block"
+      ]
+    },
+    "Amiodarone": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 300.0,
+      "indications": [
+        "Refractory VF/VT"
+      ],
+      "contraindications_flags": [
+        "Bradycardia"
+      ]
+    },
+    "Aspirin": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "PO"
+      ],
+      "max_single_dose": 300.0,
+      "indications": [
+        "Chest pain",
+        "Suspected ACS"
+      ],
+      "contraindications_flags": [
+        "Active bleeding",
+        "True allergy"
+      ]
+    },
+    "Naloxone": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO",
+        "IN"
+      ],
+      "max_single_dose": 2.0,
+      "indications": [
+        "Suspected Opioid Toxicity (Pinpoint Pupils + Low GCS + Hypoventilation)"
+      ],
+      "contraindications_flags": []
+    },
+    "Glucose": {
+      "allowed_units": [
+        "g"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 25.0,
+      "indications": [
+        "Hypoglycemia"
+      ],
+      "contraindications_flags": []
+    },
+    "nitro": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "SL"
+      ],
+      "max_single_dose": 0.6,
+      "indications": [
+        "Chest pain",
+        "ACS",
+        "Pulmonary Edema"
+      ],
+      "contraindications_flags": [
+        "Hypotension (Decompensated)",
+        "Recent ED meds use"
+      ]
+    },
+    "Adenosine": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 12.0,
+      "indications": [
+        "Palpitations",
+        "SVT",
+        "General Arrhythmia Management"
+      ],
+      "contraindications_flags": [
+        "Asthma",
+        "Bradycardia"
+      ]
+    },
+    "metoprolol": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 5.0,
+      "indications": [
+        "Rate control in AFib/SVT"
+      ],
+      "contraindications_flags": [
+        "Hypotension (Decompensated)",
+        "Bradycardia"
+      ]
+    },
+    "optalgine": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "PO"
+      ],
+      "max_single_dose": 1000.0,
+      "indications": [
+        "Mild to moderate pain",
+        "Fever"
+      ],
+      "contraindications_flags": [
+        "Hypotension (Decompensated)"
+      ]
+    },
+    "etomidate": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 30.0,
+      "indications": [
+        "Induction for intubation"
+      ],
+      "contraindications_flags": [
+        "Septic shock (relative)"
+      ]
+    },
+    "isoket": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 2.0,
+      "indications": [
+        "Pulmonary Edema",
+        "ACS"
+      ],
+      "contraindications_flags": [
+        "Hypotension (Decompensated)",
+        "Recent ED meds use"
+      ]
+    },
+    "aerovent": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "INH"
+      ],
+      "max_single_dose": 0.5,
+      "indications": [
+        "Asthma",
+        "COPD",
+        "Respiratory Distress"
+      ],
+      "contraindications_flags": []
+    },
+    "paracetamol": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "PO"
+      ],
+      "max_single_dose": 1000.0,
+      "indications": [
+        "Mild to moderate pain",
+        "Fever"
+      ],
+      "contraindications_flags": [
+        "Severe liver disease"
+      ]
+    },
+    "ventolin": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "INH"
+      ],
+      "max_single_dose": 5.0,
+      "indications": [
+        "General Respiratory Distress",
+        "Wheezing",
+        "Asthma",
+        "Anaphylaxis"
+      ],
+      "contraindications_flags": [
+        "Severe Tachycardia"
+      ]
+    },
+    "dopamine": {
+      "allowed_units": [
+        "mcg/kg/min"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 20.0,
+      "indications": [
+        "Cardiogenic Shock",
+        "Symptomatic Bradycardia"
+      ],
+      "contraindications_flags": [
+        "Hypovolemic Shock (uncorrected)"
+      ]
+    },
+    "cyanokit": {
+      "allowed_units": [
+        "g"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 5.0,
+      "indications": [
+        "Suspected cyanide poisoning",
+        "Smoke inhalation"
+      ],
+      "contraindications_flags": []
+    },
+    "heparin": {
+      "allowed_units": [
+        "units"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 5000.0,
+      "indications": [
+        "STEMI",
+        "ACS"
+      ],
+      "contraindications_flags": [
+        "Active bleeding",
+        "Recent trauma"
+      ]
+    },
+    "calcium gluconate": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 1000.0,
+      "indications": [
+        "Hyperkalemia",
+        "Calcium channel blocker overdose",
+        "Magnesium toxicity"
+      ],
+      "contraindications_flags": [
+        "VFib"
+      ]
+    },
+    "ondansetron": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO",
+        "PO"
+      ],
+      "max_single_dose": 4.0,
+      "indications": [
+        "Nausea and vomiting"
+      ],
+      "contraindications_flags": [
+        "Prolonged QT"
+      ]
+    },
+    "magnesium sulfate": {
+      "allowed_units": [
+        "g"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 2.0,
+      "indications": [
+        "Torsades de Pointes",
+        "Severe Asthma",
+        "Eclampsia"
+      ],
+      "contraindications_flags": [
+        "Bradycardia",
+        "Heart block"
+      ]
+    },
+    "labetalol": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 20.0,
+      "indications": [
+        "Hypertensive emergency"
+      ],
+      "contraindications_flags": [
+        "Asthma",
+        "Bradycardia",
+        "Heart block"
+      ]
+    },
+    "sodium bicarbonate": {
+      "allowed_units": [
+        "mEq"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 100.0,
+      "indications": [
+        "Severe metabolic acidosis",
+        "Prolonged cardiac arrest",
+        "TCA overdose"
+      ],
+      "contraindications_flags": []
+    },
+    "sodium thiosulfate": {
+      "allowed_units": [
+        "g"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 12.5,
+      "indications": [
+        "Cyanide poisoning"
+      ],
+      "contraindications_flags": []
+    },
+    "solumedrol": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 125.0,
+      "indications": [
+        "Severe Asthma",
+        "Anaphylaxis",
+        "COPD exacerbation"
+      ],
+      "contraindications_flags": []
+    },
+    "furosemide": {
+      "allowed_units": [
+        "mg"
+      ],
+      "allowed_routes": [
+        "IV",
+        "IO"
+      ],
+      "max_single_dose": 120.0,
+      "indications": [
+        "Pulmonary Edema",
+        "CHF"
+      ],
+      "contraindications_flags": [
+        "Hypovolemia",
+        "Hypotension (Decompensated)"
+      ]
+    }
+  },
   "protocols": [
     {
       "protocol_id": "TRAUMA_01",
       "name": "Hemorrhagic Shock / Massive Bleeding",
-      "archetype_triggers": ["Penetrating Trauma", "Blunt Trauma", "Multi-System Trauma", "Blast Injury"],
-      "clinical_triggers": ["Active bleeding", "Pale skin", "Sweaty", "Altered mental status"],
+      "archetype_triggers": [
+        "Penetrating Trauma",
+        "Blunt Trauma",
+        "Multi-System Trauma",
+        "Blast Injury"
+      ],
+      "clinical_triggers": [
+        "Active bleeding",
+        "Pale skin",
+        "Sweaty",
+        "Altered mental status"
+      ],
       "vital_thresholds": {
         "systolic_bp_max": 90,
         "shock_index_min": 1.0
@@ -37,14 +581,25 @@
           "special_instructions": "Permissive Hypotension: only until radial pulse returns."
         }
       ],
-      "contraindications_and_warnings": ["Avoid over-resuscitation with fluids.", "Check for Tension Pneumothorax if refractory."]
+      "contraindications_and_warnings": [
+        "Avoid over-resuscitation with fluids.",
+        "Check for Tension Pneumothorax if refractory."
+      ]
     },
     {
       "protocol_id": "RESUS_01",
       "name": "Adult Cardiac Arrest",
-      "archetype_triggers": ["Medical Emergency"],
-      "clinical_triggers": ["Unresponsive", "No pulse", "Apneic"],
-      "vital_thresholds": {"heart_rate": 0},
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Unresponsive",
+        "No pulse",
+        "Apneic"
+      ],
+      "vital_thresholds": {
+        "heart_rate": 0
+      },
       "immediate_actions": [
         "High-quality CPR (100-120 bpm).",
         "Defibrillator analysis.",
@@ -68,14 +623,26 @@
           "special_instructions": "Refractory VF/VT only."
         }
       ],
-      "contraindications_and_warnings": ["Minimize CPR interruptions.", "Check reversible causes (H's and T's)."]
+      "contraindications_and_warnings": [
+        "Minimize CPR interruptions.",
+        "Check reversible causes (H's and T's)."
+      ]
     },
     {
       "protocol_id": "RESP_02",
       "name": "General Respiratory Distress",
-      "archetype_triggers": ["Medical Emergency"],
-      "clinical_triggers": ["Tachypnea", "Accessory muscle use", "Tripod position", "Wheezing"],
-      "vital_thresholds": {"spo2_max": 94},
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Tachypnea",
+        "Accessory muscle use",
+        "Tripod position",
+        "Wheezing"
+      ],
+      "vital_thresholds": {
+        "spo2_max": 94
+      },
       "immediate_actions": [
         "Upright position.",
         "High-flow oxygen.",
@@ -91,14 +658,25 @@
           "special_instructions": "Nebulized."
         }
       ],
-      "contraindications_and_warnings": ["Avoid fluid boluses if CHF suspected.", "Use caution with high O2 in COPD."]
+      "contraindications_and_warnings": [
+        "Avoid fluid boluses if CHF suspected.",
+        "Use caution with high O2 in COPD."
+      ]
     },
     {
       "protocol_id": "CARD_01",
       "name": "General Cardiac Approach / ACS",
-      "archetype_triggers": ["Medical Emergency"],
-      "clinical_triggers": ["Chest pain", "Diaphoresis", "Radiation to jaw/arm"],
-      "vital_thresholds": {"systolic_bp_min": 90},
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Chest pain",
+        "Diaphoresis",
+        "Radiation to jaw/arm"
+      ],
+      "vital_thresholds": {
+        "systolic_bp_min": 90
+      },
       "immediate_actions": [
         "Position of comfort.",
         "12-lead ECG within 10 mins.",
@@ -121,108 +699,898 @@
           "special_instructions": "Monitor BP before each dose."
         }
       ],
-      "contraindications_and_warnings": ["Contraindicated if ED meds used recently.", "ECG does not rule out MI."]
+      "contraindications_and_warnings": [
+        "Contraindicated if ED meds used recently.",
+        "ECG does not rule out MI."
+      ]
     },
     {
-    "protocol_id": "TRAUMA_02",
-    "name": "Hemorrhagic Shock Management",
-    "archetype_triggers": ["Penetrating Trauma", "Blunt Trauma", "Multi-System Trauma"],
-    "clinical_triggers": ["Hypotension", "Tachycardia", "Narrow pulse pressure", "Altered mental status"],
-    "vital_thresholds": {"systolic_bp_max": 90, "shock_index_min": 1.0},
-    "immediate_actions": [
+      "protocol_id": "TRAUMA_02",
+      "name": "Hemorrhagic Shock Management",
+      "archetype_triggers": [
+        "Penetrating Trauma",
+        "Blunt Trauma",
+        "Multi-System Trauma"
+      ],
+      "clinical_triggers": [
+        "Hypotension",
+        "Tachycardia",
+        "Narrow pulse pressure",
+        "Altered mental status"
+      ],
+      "vital_thresholds": {
+        "systolic_bp_max": 90,
+        "shock_index_min": 1.0
+      },
+      "immediate_actions": [
         "Immediate hemorrhage control (Tourniquet/Packing).",
         "Airway and breathing assessment.",
-     "Establish two large-bore IV lines or IO access.",
-     "Monitor vital signs continuously.",
-     "Permissive hypotension approach until major hemorrhage controlled."
-     ],
-     "medications": [
+        "Establish two large-bore IV lines or IO access.",
+        "Monitor vital signs continuously.",
+        "Permissive hypotension approach until major hemorrhage controlled."
+      ],
+      "medications": [
+        {
+          "name": "TXA (Tranexamic Acid)",
+          "dosage": 1.0,
+          "unit": "gram",
+          "route": "IV",
+          "special_instructions": "Administer within 3 hours of injury."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Avoid over-aggressive fluid resuscitation (coagulopathy risk)."
+      ]
+    },
     {
-      "name": "TXA (Tranexamic Acid)",
-      "dosage": 1.0,
-      "unit": "gram",
-      "route": "IV",
-      "special_instructions": "Administer within 3 hours of injury."
+      "protocol_id": "MED_02",
+      "name": "Anaphylaxis Management",
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Urticaria",
+        "Angioedema",
+        "Respiratory distress",
+        "Hypotension"
+      ],
+      "vital_thresholds": {
+        "systolic_bp_max": 90
+      },
+      "immediate_actions": [
+        "Identify and remove allergen.",
+        "Position in supine with legs elevated.",
+        "Establish IV access.",
+        "Monitor airway status closely."
+      ],
+      "medications": [
+        {
+          "name": "Epinephrine 1:1000",
+          "dosage": 0.3,
+          "unit": "mg",
+          "route": "IM",
+          "special_instructions": "Repeat every 5-15 mins if no clinical improvement."
+        },
+        {
+          "name": "Diphenhydramine",
+          "dosage": 50.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "H1 receptor antagonist."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Epinephrine is first-line; do not delay."
+      ]
+    },
+    {
+      "protocol_id": "TRAUMA_03",
+      "name": "Adult Burn Injury Management",
+      "archetype_triggers": [
+        "Burn Injury"
+      ],
+      "clinical_triggers": [
+        "Full/Partial thickness burns",
+        "Inhalation injury signs"
+      ],
+      "vital_thresholds": {},
+      "immediate_actions": [
+        "Stop the burning process.",
+        "Cover burns with dry, clean dressings.",
+        "Assess for inhalation injury (soot, singed hair, stridor).",
+        "Monitor EtCO2 if inhalation suspected.",
+        "Calculate fluid needs based on Rule of Nines."
+      ],
+      "medications": [
+        {
+          "name": "Fentanyl",
+          "dosage": 50.0,
+          "unit": "mcg",
+          "route": "IV",
+          "special_instructions": "For analgesic control, titrated to effect."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Do not apply ice (hypothermia risk).",
+        "Prioritize Airway in facial burns."
+      ]
+    },
+    {
+      "protocol_id": "CARD_02",
+      "name": "General Arrhythmia Management",
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Palpitations",
+        "Syncope/Presyncope",
+        "Chest pain",
+        "Hypotension"
+      ],
+      "vital_thresholds": {
+        "systolic_bp_max": 90
+      },
+      "immediate_actions": [
+        "Assess hemodynamic stability.",
+        "Obtain 12-lead ECG.",
+        "If hemodynamically unstable: Synchronized Cardioversion.",
+        "If stable: Vagal maneuvers / Pharmacological rate control."
+      ],
+      "medications": [
+        {
+          "name": "Adenosine",
+          "dosage": 6.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "Rapid IV push, follow with 20ml flush. May increase to 12mg."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Synchronized cardioversion requires sedation if patient conscious.",
+        "Caution with Beta-Blockers in bradycardia."
+      ]
+    },
+    {
+      "protocol_id": "NEURO_01",
+      "name": "Seizure Management",
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Convulsions",
+        "Altered mental status",
+        "Postictal state"
+      ],
+      "vital_thresholds": {
+        "spo2_max": 94
+      },
+      "immediate_actions": [
+        "Protect patient from injury (remove nearby objects).",
+        "Position in left lateral decubitus if possible.",
+        "Administer high-flow oxygen.",
+        "Establish IV access.",
+        "Monitor airway and breathing closely."
+      ],
+      "medications": [
+        {
+          "name": "Midazolam",
+          "dosage": 5.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "For active seizures, may repeat every 5 mins up to 10mg."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Status epilepticus: seizures lasting >5 mins or recurrent without recovery."
+      ]
+    },
+    {
+      "protocol_id": "ENDO_01",
+      "name": "Diabetic Emergencies",
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Altered mental status",
+        "Dehydration signs",
+        "Kussmaul respirations"
+      ],
+      "vital_thresholds": {
+        "blood_glucose_max": 70
+      },
+      "immediate_actions": [
+        "Assess airway and breathing.",
+        "Establish IV access.",
+        "Administer high-flow oxygen if hypoxic.",
+        "Check blood glucose levels.",
+        "Prepare for potential DKA management."
+      ],
+      "medications": [
+        {
+          "name": "Glucose",
+          "dosage": 25.0,
+          "unit": "g",
+          "route": "IV",
+          "special_instructions": "Administer as 25g of Dextrose 50% solution."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Hypoglycemia can mimic stroke or intoxication.",
+        "DKA may require insulin and fluids (not in prehospital setting)."
+      ]
+    },
+    {
+      "protocol_id": "TOX_01",
+      "name": "Suspected Opioid Toxicity",
+      "archetype_triggers": [
+        "Medical Emergency",
+        "Overdose",
+        "Altered Mental Status"
+      ],
+      "clinical_triggers": [
+        "Pinpoint pupils",
+        "Hypoventilation",
+        "Respiratory depression",
+        "Cyanosis"
+      ],
+      "vital_thresholds": {
+        "respiratory_rate_max": 10,
+        "gcs_max": 12
+      },
+      "immediate_actions": [
+        "Support ventilation with Bag-Valve-Mask (BVM) and 100% oxygen.",
+        "Establish IV/IO access.",
+        "Clear airway and place advanced airway if breathing remains inadequate after antidote."
+      ],
+      "medications": [
+        {
+          "name": "Naloxone",
+          "dosage": 0.4,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "Titrate slowly to restore adequate spontaneous respiration, max single dose 2.0mg. Can be given IN if IV access is delayed."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Avoid rushing to full reversal to prevent acute withdrawal syndrome and severe agitation/vomiting."
+      ]
+    },
+    {
+      "protocol_id": "MED_03",
+      "name": "Acute Hypoglycemia",
+      "archetype_triggers": [
+        "Medical Emergency",
+        "Altered Mental Status"
+      ],
+      "clinical_triggers": [
+        "Altered mental status",
+        "Diaphoresis",
+        "Tachycardia",
+        "Seizure-like activity"
+      ],
+      "vital_thresholds": {
+        "gcs_max": 14
+      },
+      "immediate_actions": [
+        "Secure airway and support breathing as needed.",
+        "Check blood glucose level immediately.",
+        "Establish secure IV/IO access."
+      ],
+      "medications": [
+        {
+          "name": "Glucose",
+          "dosage": 25.0,
+          "unit": "g",
+          "route": "IV",
+          "special_instructions": "Administer via a secure, free-flowing large-bore IV line. Re-check glucose after 10-15 minutes."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Ensure IV patency before administration; extravasation of hypertonic glucose causes severe tissue necrosis."
+      ]
+    },
+    {
+      "protocol_id": "CARD_03",
+      "name": "Acute Pulmonary Edema / Congestive Heart Failure (CHF)",
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Severe dyspnea",
+        "Rales/Crackles on auscultation",
+        "Orthopnea",
+        "Pink frothy sputum",
+        "Hypertension"
+      ],
+      "vital_thresholds": {
+        "systolic_bp_min": 100,
+        "spo2_max": 92
+      },
+      "immediate_actions": [
+        "Sit the patient upright with legs dangling if possible.",
+        "Apply Non-Invasive Positive Pressure Ventilation (CPAP) with high-flow oxygen.",
+        "Establish IV access."
+      ],
+      "medications": [
+        {
+          "name": "nitro",
+          "dosage": 0.4,
+          "unit": "mg",
+          "route": "SL",
+          "special_instructions": "Administer every 3-5 minutes as long as systolic BP remains above 100 mmHg."
+        },
+        {
+          "name": "furosemide",
+          "dosage": 40.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "Slow IV push. Double the patient's daily home dose if known, up to a max single dose of 120.0mg."
+        },
+        {
+          "name": "isoket",
+          "dosage": 2.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "Consider continuous IV infusion if hypertensive crisis persists and SL nitroglycerin is insufficient."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Strictly contraindicated if systolic BP < 90 mmHg or if erectile dysfunction medications were taken recently. Avoid fluid boluses."
+      ]
+    },
+    {
+      "protocol_id": "TOX_02",
+      "name": "Cyanide Poisoning & Smoke Inhalation",
+      "archetype_triggers": [
+        "Medical Emergency",
+        "Toxic Exposure",
+        "Burn Injury"
+      ],
+      "clinical_triggers": [
+        "Smoke inhalation in an enclosed space",
+        "Soot in airway",
+        "Altered mental status",
+        "Severe metabolic acidosis",
+        "Coma/Seizures"
+      ],
+      "vital_thresholds": {
+        "gcs_max": 14
+      },
+      "immediate_actions": [
+        "Remove patient from toxic environment.",
+        "Administer 100% high-flow oxygen; consider early intubation for airway burns.",
+        "Establish IV/IO access."
+      ],
+      "medications": [
+        {
+          "name": "cyanokit",
+          "dosage": 5.0,
+          "unit": "g",
+          "route": "IV",
+          "special_instructions": "Infuse over 15 minutes. A second dose may be required for severe cases."
+        },
+        {
+          "name": "sodium thiosulfate",
+          "dosage": 12.5,
+          "unit": "g",
+          "route": "IV",
+          "special_instructions": "Administer if Cyanokit is unavailable or as an adjunct in severe cyanide toxicity."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Cyanokit causes severe red skin and urine discoloration; this is normal. Do not delay administration in suspected comatose smoke inhalation cases."
+      ]
+    },
+    {
+      "protocol_id": "NEURO_02",
+      "name": "Stroke / Suspected Stroke",
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Facial droop",
+        "Arm weakness",
+        "Speech difficulty",
+        "Sudden onset neurological deficit"
+      ],
+      "vital_thresholds": {
+        "gcs_max": 14
+      },
+      "immediate_actions": [
+        "Assess airway and breathing; provide high-flow oxygen if hypoxic.",
+        "Establish IV access.",
+        "Perform rapid stroke assessment (e.g., FAST exam).",
+        "Transport to stroke center with pre-notification."
+      ],
+      "medications": []
+    },
+    {
+      "protocol_id": "PAIN_01",
+      "name": "General Pain Management",
+      "archetype_triggers": [
+        "Trauma",
+        "Medical Emergency",
+        "Burn Injury"
+      ],
+      "clinical_triggers": [
+        "Reports of severe pain",
+        "Visible severe injury",
+        "Agitation due to pain"
+      ],
+      "vital_thresholds": {},
+      "immediate_actions": [
+        "Assess pain level using 1-10 scale or clinical judgment.",
+        "Position of comfort and splinting of suspected fractures.",
+        "Establish IV/IO access for moderate to severe pain."
+      ],
+      "medications": [
+        {
+          "name": "Fentanyl",
+          "dosage": 100.0,
+          "unit": "mcg",
+          "route": "IV",
+          "special_instructions": "Titrate to effect. Preferred in hypovolemia over morphine."
+        },
+        {
+          "name": "Ketamine",
+          "dosage": 50.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "For severe, refractory pain. Given as slow push or short infusion."
+        },
+        {
+          "name": "optalgine",
+          "dosage": 1000.0,
+          "unit": "mg",
+          "route": "PO",
+          "special_instructions": "For mild to moderate pain."
+        },
+        {
+          "name": "paracetamol",
+          "dosage": 1000.0,
+          "unit": "mg",
+          "route": "PO",
+          "special_instructions": "For mild pain or fever."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Avoid Fentanyl in uncorrected severe hypotension.",
+        "Avoid Ketamine in suspected severe Traumatic Brain Injury (TBI) with high ICP."
+      ]
+    },
+    {
+      "protocol_id": "AWY_01",
+      "name": "Advanced Airway Management / RSI",
+      "archetype_triggers": [
+        "Medical Emergency",
+        "Trauma",
+        "Burn Injury"
+      ],
+      "clinical_triggers": [
+        "Failure to protect airway",
+        "Impending respiratory failure",
+        "GCS <= 8",
+        "Severe inhalation burns"
+      ],
+      "vital_thresholds": {
+        "gcs_max": 8
+      },
+      "immediate_actions": [
+        "Pre-oxygenate with 100% O2 via BVM/Nasal Cannula (Apneic oxygenation).",
+        "Prepare suction, advanced airway equipment, and capnography.",
+        "Ensure patent and secure IV/IO access."
+      ],
+      "medications": [
+        {
+          "name": "Ketamine",
+          "dosage": 150.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "Induction agent of choice for hemodynamically unstable patients or severe asthma."
+        },
+        {
+          "name": "etomidate",
+          "dosage": 20.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "Alternative induction agent. Avoid in suspected septic shock."
+        },
+        {
+          "name": "Midazolam",
+          "dosage": 5.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "For post-intubation sedation."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Ensure all equipment and backup airways are ready before administering induction agents."
+      ]
+    },
+    {
+      "protocol_id": "TRAUMA_04",
+      "name": "Crush Syndrome / Prolonged Entrapment",
+      "archetype_triggers": [
+        "Blunt Trauma",
+        "Multi-System Trauma"
+      ],
+      "clinical_triggers": [
+        "Prolonged entrapment (>1 hour) of muscle mass",
+        "Crush injury",
+        "Absent pulse in trapped limb"
+      ],
+      "vital_thresholds": {},
+      "immediate_actions": [
+        "Establish large-bore IV access before extrication if possible.",
+        "Aggressive fluid resuscitation to protect kidneys from myoglobinuria.",
+        "Apply tourniquet to crushed limb prior to release if severe bleeding or hyperkalemia suspected.",
+        "Obtain 12-lead ECG to monitor for hyperkalemia (peaked T waves)."
+      ],
+      "medications": [
+        {
+          "name": "Hartmann's Solution",
+          "dosage": 1000.0,
+          "unit": "ml",
+          "route": "IV",
+          "special_instructions": "Run wide open before and during extrication."
+        },
+        {
+          "name": "calcium gluconate",
+          "dosage": 1000.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "Administer if ECG shows signs of hyperkalemia (peaked T waves, wide QRS) immediately upon release."
+        },
+        {
+          "name": "sodium bicarbonate",
+          "dosage": 50.0,
+          "unit": "mEq",
+          "route": "IV",
+          "special_instructions": "Alkalinize urine to prevent kidney failure from crush syndrome."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Reperfusion injury can cause sudden cardiac arrest upon release. Be prepared with defibrillator and hyperkalemia meds."
+      ]
+    },
+    {
+      "protocol_id": "CARD_04",
+      "name": "Symptomatic Bradycardia",
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Heart rate < 50 bpm",
+        "Hypotension",
+        "Altered mental status",
+        "Signs of shock"
+      ],
+      "vital_thresholds": {
+        "heart_rate_max": 50,
+        "systolic_bp_max": 90
+      },
+      "immediate_actions": [
+        "Assess airway and breathing; administer oxygen.",
+        "Obtain 12-lead ECG.",
+        "Prepare for transcutaneous pacing if patient is unstable."
+      ],
+      "medications": [
+        {
+          "name": "Atropine",
+          "dosage": 1.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "First-line. Repeat every 3-5 mins up to a maximum of 3mg."
+        },
+        {
+          "name": "dopamine",
+          "dosage": 10.0,
+          "unit": "mcg/kg/min",
+          "route": "IV",
+          "special_instructions": "Use as infusion if atropine is ineffective."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Atropine may be ineffective in high-degree AV blocks (Mobitz II or 3rd degree). Proceed directly to pacing or dopamine."
+      ]
+    },
+    {
+      "protocol_id": "OB_01",
+      "name": "Obstetric Emergencies / Eclampsia",
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Pregnant patient (>20 weeks) or up to 4 weeks postpartum",
+        "Seizures",
+        "Severe hypertension",
+        "Severe headache/visual disturbances"
+      ],
+      "vital_thresholds": {
+        "systolic_bp_min": 160
+      },
+      "immediate_actions": [
+        "Protect airway, prevent injury during seizure.",
+        "Place patient in left lateral decubitus position.",
+        "Administer high-flow oxygen."
+      ],
+      "medications": [
+        {
+          "name": "magnesium sulfate",
+          "dosage": 2.0,
+          "unit": "g",
+          "route": "IV",
+          "special_instructions": "First-line for eclamptic seizures. Administer slowly over 5-10 minutes."
+        },
+        {
+          "name": "labetalol",
+          "dosage": 20.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "For severe hypertension (SBP >160 or DBP >110). Administer slow IV push."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Do NOT use Midazolam as first-line for eclamptic seizures unless Magnesium is unavailable or ineffective."
+      ]
+    },
+    {
+      "protocol_id": "MED_04",
+      "name": "Nausea and Vomiting",
+      "archetype_triggers": [
+        "Medical Emergency",
+        "Trauma"
+      ],
+      "clinical_triggers": [
+        "Active vomiting",
+        "Severe nausea preventing oral medication intake"
+      ],
+      "vital_thresholds": {},
+      "immediate_actions": [
+        "Position patient to prevent aspiration.",
+        "Ensure patent airway.",
+        "Establish IV access if severe dehydration is suspected."
+      ],
+      "medications": [
+        {
+          "name": "ondansetron",
+          "dosage": 4.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "Administer slow IV push. May also be given ODT (orally disintegrating)."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Use caution in patients with known prolonged QT interval."
+      ]
+    },
+    {
+      "protocol_id": "TOX_03",
+      "name": "Organophosphate / Nerve Agent Exposure",
+      "archetype_triggers": [
+        "Medical Emergency",
+        "Toxic Exposure",
+        "Hazardous Materials"
+      ],
+      "clinical_triggers": [
+        "SLUDGEM symptoms (Salivation, Lacrimation, Urination, Defecation, GI distress, Emesis, Miosis)",
+        "Severe Bradycardia",
+        "Bronchospasm & Bronchorrhea"
+      ],
+      "vital_thresholds": {
+        "heart_rate_max": 55
+      },
+      "immediate_actions": [
+        "Ensure full rescuer decontamination before handling patient.",
+        "Aggressive airway suctioning for severe secretions.",
+        "Support ventilation and apply high-flow oxygen."
+      ],
+      "medications": [
+        {
+          "name": "Atropine",
+          "dosage": 2.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "Repeat every 3-5 minutes until bronchorrhea clears and secretions dry up. Can be given IM if no IV access."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Atropine dosing in nerve agent toxicity is titrated to the clearing of lung secretions, NOT to the heart rate. Tachycardia is NOT a contraindication here."
+      ]
+    },
+    {
+      "protocol_id": "INFECT_01",
+      "name": "Sepsis / Septic Shock",
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Fever or hypothermia",
+        "Tachycardia",
+        "Tachypnea",
+        "Altered mental status",
+        "Signs of infection"
+      ],
+      "vital_thresholds": {
+        "systolic_bp_max": 90,
+        "shock_index_min": 1.0
+      },
+      "immediate_actions": [
+        "Assess airway and breathing; administer high-flow oxygen if hypoxic.",
+        "Establish IV access.",
+        "Aggressive fluid resuscitation (30ml/kg) for hypotension or shock.",
+        "Transport to hospital with pre-notification."
+      ],
+      "medications": [
+        {
+          "name": "dopamine",
+          "dosage": 10.0,
+          "unit": "mcg/kg/min",
+          "route": "IV",
+          "special_instructions": "Use as vasopressor if patient remains hypotensive after fluid resuscitation."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Early recognition and aggressive fluid resuscitation are key. Do not delay transport for vasopressors."
+      ]
+    },
+    {
+      "protocol_id": "RESP_03",
+      "name": "Severe Asthma Exacerbation",
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Severe dyspnea",
+        "Accessory muscle use",
+        "Inability to speak full sentences",
+        "Silent chest on auscultation"
+      ],
+      "vital_thresholds": {
+        "spo2_max": 92
+      },
+      "immediate_actions": [
+        "Position patient upright.",
+        "Administer high-flow oxygen.",
+        "Apply Non-Invasive Positive Pressure Ventilation (CPAP) if available."
+      ],
+      "medications": [
+        {
+          "name": "Salbutamol (Ventolin)",
+          "dosage": 5.0,
+          "unit": "mg",
+          "route": "Inhalation",
+          "special_instructions": "Nebulized. Repeat every 20 minutes as needed."
+        },
+        {
+          "name": "solumedrol",
+          "dosage": 125.0,
+          "unit": "mg",
+          "route": "IV",
+          "special_instructions": "Administer as a single dose for severe exacerbations."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Avoid fluid boluses in severe asthma exacerbations due to risk of worsening pulmonary edema."
+      ]
+    },
+    {
+      "protocol_id": "CARD_05",
+      "name": "STEMI Management",
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Chest pain",
+        "Diaphoresis",
+        "Radiation to jaw/arm"
+      ],
+      "vital_thresholds": {
+        "systolic_bp_min": 90
+      },
+      "immediate_actions": [
+        "Position of comfort.",
+        "12-lead ECG within 10 mins.",
+        "IV access.",
+        "Oxygen if SpO2 <94%."
+      ],
+      "medications": [
+        {
+          "name": "Aspirin",
+          "dosage": 300.0,
+          "unit": "mg",
+          "route": "PO",
+          "special_instructions": "Chewable."
+        },
+        {
+          "name": "Nitroglycerin",
+          "dosage": 0.4,
+          "unit": "mg",
+          "route": "SL",
+          "special_instructions": "Monitor BP before each dose."
+        },
+        {
+          "name": "heparin",
+          "dosage": 5000.0,
+          "unit": "units",
+          "route": "IV",
+          "special_instructions": "Administer as a single bolus for STEMI patients going for PCI."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Contraindicated if ED meds used recently.",
+        "ECG does not rule out MI."
+      ]
+    },
+    {
+      "protocol_id": "CARD_06",
+      "name": "Atrial Fibrillation with Rapid Ventricular Response (RVR)",
+      "archetype_triggers": [
+        "Medical Emergency"
+      ],
+      "clinical_triggers": [
+        "Palpitations",
+        "Syncope/Presyncope",
+        "Chest pain",
+        "Hypotension"
+      ],
+      "vital_thresholds": {
+        "systolic_bp_max": 90
+      },
+      "immediate_actions": [
+        "Assess hemodynamic stability.",
+        "Obtain 12-lead ECG.",
+        "If hemodynamically unstable: Synchronized Cardioversion.",
+        "If stable: Pharmacological rate control."
+      ],
+      "medications": [
+        {
+          "name": "Diltiazem",
+          "dosage": 0.25,
+          "unit": "mg/kg",
+          "route": "IV",
+          "special_instructions": "Administer as slow IV bolus over 2 minutes. May repeat at 0.35 mg/kg after 15 minutes if needed."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Synchronized cardioversion requires sedation if patient conscious.",
+        "Caution with Beta-Blockers in bradycardia."
+      ]
+    },
+    {
+      "protocol_id": "NEURO_03",
+      "name": "Traumatic Brain Injury (TBI) Management",
+      "archetype_triggers": [
+        "Blunt Trauma",
+        "Penetrating Trauma"
+      ],
+      "clinical_triggers": [
+        "Head trauma with altered mental status",
+        "GCS <= 13",
+        "Signs of increased intracranial pressure (ICP)"
+      ],
+      "vital_thresholds": {
+        "gcs_max": 13
+      },
+      "immediate_actions": [
+        "Ensure airway patency and support breathing.",
+        "Administer high-flow oxygen to maintain SpO2 > 94%.",
+        "Establish IV access.",
+        "Elevate head of bed to 30 degrees if no spinal injury suspected."
+      ],
+      "medications": [
+        {
+          "name": "mannitol",
+          "dosage": 1.0,
+          "unit": "g/kg",
+          "route": "IV",
+          "special_instructions": "Administer as a single bolus for signs of increased ICP. Use with caution in hypotensive patients."
+        }
+      ],
+      "contraindications_and_warnings": [
+        "Avoid hyperventilation (PaCO2 < 30 mmHg) as it can reduce cerebral perfusion.",
+        "Mannitol can worsen hypotension; ensure adequate volume status before administration."
+      ]
     }
-     ],
-     "contraindications_and_warnings": ["Avoid over-aggressive fluid resuscitation (coagulopathy risk)."]
-    },
-     {
-     "protocol_id": "MED_02",
-     "name": "Anaphylaxis Management",
-     "archetype_triggers": ["Medical Emergency"],
-     "clinical_triggers": ["Urticaria", "Angioedema", "Respiratory distress", "Hypotension"],
-     "vital_thresholds": {"systolic_bp_max": 90},
-     "immediate_actions": [
-       "Identify and remove allergen.",
-       "Position in supine with legs elevated.",
-       "Establish IV access.",
-       "Monitor airway status closely."
-     ],
-     "medications": [
-       {
-         "name": "Epinephrine 1:1000",
-         "dosage": 0.3,
-         "unit": "mg",
-         "route": "IM",
-         "special_instructions": "Repeat every 5-15 mins if no clinical improvement."
-       },
-       {
-         "name": "Diphenhydramine",
-         "dosage": 50.0,
-         "unit": "mg",
-         "route": "IV",
-         "special_instructions": "H1 receptor antagonist."
-       }
-     ],
-     "contraindications_and_warnings": ["Epinephrine is first-line; do not delay."]
-    },
-     {
-     "protocol_id": "TRAUMA_03",
-     "name": "Adult Burn Injury Management",
-     "archetype_triggers": ["Burn Injury"],
-     "clinical_triggers": ["Full/Partial thickness burns", "Inhalation injury signs"],
-     "vital_thresholds": {},
-     "immediate_actions": [
-       "Stop the burning process.",
-       "Cover burns with dry, clean dressings.",
-       "Assess for inhalation injury (soot, singed hair, stridor).",
-       "Monitor EtCO2 if inhalation suspected.",
-       "Calculate fluid needs based on Rule of Nines."
-     ],
-     "medications": [
-       {
-         "name": "Fentanyl",
-         "dosage": 50.0,
-         "unit": "mcg",
-         "route": "IV",
-         "special_instructions": "For analgesic control, titrated to effect."
-       }
-     ],
-     "contraindications_and_warnings": ["Do not apply ice (hypothermia risk).", "Prioritize Airway in facial burns."]
-    },
-    {
-     "protocol_id": "CARD_02",
-     "name": "General Arrhythmia Management",
-     "archetype_triggers": ["Medical Emergency"],
-     "clinical_triggers": ["Palpitations", "Syncope/Presyncope", "Chest pain", "Hypotension"],
-     "vital_thresholds": {"systolic_bp_max": 90},
-     "immediate_actions": [
-       "Assess hemodynamic stability.",
-       "Obtain 12-lead ECG.",
-       "If hemodynamically unstable: Synchronized Cardioversion.",
-       "If stable: Vagal maneuvers / Pharmacological rate control."
-     ],
-     "medications": [
-       {
-         "name": "Adenosine",
-         "dosage": 6.0,
-         "unit": "mg",
-         "route": "IV",
-         "special_instructions": "Rapid IV push, follow with 20ml flush. May increase to 12mg."
-       }
-     ],
-     "contraindications_and_warnings": ["Synchronized cardioversion requires sedation if patient conscious.", "Caution with Beta-Blockers in bradycardia."]
-     }
   ]
 }
