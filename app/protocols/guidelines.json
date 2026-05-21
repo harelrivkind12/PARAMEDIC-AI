@@ -16,6 +16,8 @@
         "IN"
       ],
       "max_single_dose": 250.0,
+      "max_dose_per_kg": 3.0,
+      "is_pediatric_approved": true,
       "indications": [
         "Severe pain",
         "Induction for intubation",
@@ -37,6 +39,8 @@
         "IM"
       ],
       "max_single_dose": 1.0,
+      "max_dose_per_kg": 0.01,
+      "is_pediatric_approved": true,
       "indications": [
         "Cardiac Arrest",
         "Anaphylaxis",
@@ -58,6 +62,8 @@
         "IO"
       ],
       "max_single_dose": 1000.0,
+      "max_dose_per_kg": 15.0,
+      "is_pediatric_approved": true,
       "indications": [
         "Hemorrhagic Shock",
         "Massive Bleeding"
@@ -75,6 +81,8 @@
         "IO"
       ],
       "max_single_dose": 200.0,
+      "max_dose_per_kg": 2.0,
+      "is_pediatric_approved": true,
       "indications": [
         "Analgesic control",
         "Burn Injury",
@@ -94,6 +102,8 @@
         "IO"
       ],
       "max_single_dose": 10.0,
+      "max_dose_per_kg": 0.2,
+      "is_pediatric_approved": true,
       "indications": [
         "Seizures",
         "Sedation",
@@ -112,6 +122,8 @@
         "IO"
       ],
       "max_single_dose": 1.0,
+      "max_dose_per_kg": 0.02,
+      "is_pediatric_approved": true,
       "indications": [
         "Symptomatic Bradycardia",
         "Organophosphate poisoning"
@@ -145,6 +157,8 @@
         "IO"
       ],
       "max_single_dose": 300.0,
+      "max_dose_per_kg": 5.0,
+      "is_pediatric_approved": true,
       "indications": [
         "Refractory VF/VT"
       ],
@@ -160,6 +174,8 @@
         "PO"
       ],
       "max_single_dose": 300.0,
+      "max_dose_per_kg": 0.0,
+      "is_pediatric_approved": false,
       "indications": [
         "Chest pain",
         "Suspected ACS"
@@ -179,6 +195,8 @@
         "IN"
       ],
       "max_single_dose": 2.0,
+      "max_dose_per_kg": 0.1,
+      "is_pediatric_approved": true,
       "indications": [
         "Suspected Opioid Toxicity (Pinpoint Pupils + Low GCS + Hypoventilation)"
       ],
@@ -193,6 +211,8 @@
         "IO"
       ],
       "max_single_dose": 25.0,
+      "max_dose_per_kg": 0.5,
+      "is_pediatric_approved": true,
       "indications": [
         "Hypoglycemia"
       ],
@@ -205,7 +225,9 @@
       "allowed_routes": [
         "SL"
       ],
-      "max_single_dose": 0.6,
+      "max_single_dose": 0.4,
+      "max_dose_per_kg": 0.0,
+      "is_pediatric_approved": false,
       "indications": [
         "Chest pain",
         "ACS",
@@ -225,6 +247,8 @@
         "IO"
       ],
       "max_single_dose": 12.0,
+      "max_dose_per_kg": 0.2,
+      "is_pediatric_approved": true,
       "indications": [
         "Palpitations",
         "SVT",
@@ -244,6 +268,8 @@
         "IO"
       ],
       "max_single_dose": 5.0,
+      "max_dose_per_kg": 0.0,
+      "is_pediatric_approved": false,
       "indications": [
         "Rate control in AFib/SVT"
       ],
@@ -260,6 +286,8 @@
         "PO"
       ],
       "max_single_dose": 1000.0,
+      "max_dose_per_kg": 15.0,
+      "is_pediatric_approved": true,
       "indications": [
         "Mild to moderate pain",
         "Fever"
@@ -277,6 +305,8 @@
         "IO"
       ],
       "max_single_dose": 30.0,
+      "max_dose_per_kg": 0.3,
+      "is_pediatric_approved": true,
       "indications": [
         "Induction for intubation"
       ],
@@ -293,6 +323,8 @@
         "IO"
       ],
       "max_single_dose": 2.0,
+      "max_dose_per_kg": 0.0,
+      "is_pediatric_approved": false,
       "indications": [
         "Pulmonary Edema",
         "ACS"
@@ -310,6 +342,8 @@
         "INH"
       ],
       "max_single_dose": 0.5,
+      "max_dose_per_kg": 0.02,
+      "is_pediatric_approved": true,
       "indications": [
         "Asthma",
         "COPD",
@@ -325,6 +359,8 @@
         "PO"
       ],
       "max_single_dose": 1000.0,
+      "max_dose_per_kg": 15.0,
+      "is_pediatric_approved": true,
       "indications": [
         "Mild to moderate pain",
         "Fever"
@@ -341,6 +377,8 @@
         "INH"
       ],
       "max_single_dose": 5.0,
+      "max_dose_per_kg": 0.15,
+      "is_pediatric_approved": true,
       "indications": [
         "General Respiratory Distress",
         "Wheezing",
@@ -360,6 +398,8 @@
         "IO"
       ],
       "max_single_dose": 20.0,
+      "max_dose_per_kg": 20.0,
+      "is_pediatric_approved": true,
       "indications": [
         "Cardiogenic Shock",
         "Symptomatic Bradycardia"
@@ -377,6 +417,8 @@
         "IO"
       ],
       "max_single_dose": 5.0,
+      "max_dose_per_kg": 0.07,
+      "is_pediatric_approved": true,
       "indications": [
         "Suspected cyanide poisoning",
         "Smoke inhalation"
@@ -392,6 +434,8 @@
         "IO"
       ],
       "max_single_dose": 5000.0,
+      "max_dose_per_kg": 0.0,
+      "is_pediatric_approved": false,
       "indications": [
         "STEMI",
         "ACS"
@@ -410,6 +454,8 @@
         "IO"
       ],
       "max_single_dose": 1000.0,
+      "max_dose_per_kg": 60.0,
+      "is_pediatric_approved": true,
       "indications": [
         "Hyperkalemia",
         "Calcium channel blocker overdose",
@@ -429,6 +475,8 @@
         "PO"
       ],
       "max_single_dose": 4.0,
+      "max_dose_per_kg": 0.15,
+      "is_pediatric_approved": true,
       "indications": [
         "Nausea and vomiting"
       ],
@@ -445,6 +493,8 @@
         "IO"
       ],
       "max_single_dose": 2.0,
+      "max_dose_per_kg": 0.05,
+      "is_pediatric_approved": true,
       "indications": [
         "Torsades de Pointes",
         "Severe Asthma",
@@ -464,6 +514,8 @@
         "IO"
       ],
       "max_single_dose": 20.0,
+      "max_dose_per_kg": 0.0,
+      "is_pediatric_approved": false,
       "indications": [
         "Hypertensive emergency"
       ],
@@ -482,6 +534,8 @@
         "IO"
       ],
       "max_single_dose": 100.0,
+      "max_dose_per_kg": 1.0,
+      "is_pediatric_approved": true,
       "indications": [
         "Severe metabolic acidosis",
         "Prolonged cardiac arrest",
@@ -498,6 +552,8 @@
         "IO"
       ],
       "max_single_dose": 12.5,
+      "max_dose_per_kg": 0.25,
+      "is_pediatric_approved": true,
       "indications": [
         "Cyanide poisoning"
       ],
@@ -512,6 +568,8 @@
         "IO"
       ],
       "max_single_dose": 125.0,
+      "max_dose_per_kg": 2.0,
+      "is_pediatric_approved": true,
       "indications": [
         "Severe Asthma",
         "Anaphylaxis",
@@ -528,6 +586,8 @@
         "IO"
       ],
       "max_single_dose": 120.0,
+      "max_dose_per_kg": 1.0,
+      "is_pediatric_approved": true,
       "indications": [
         "Pulmonary Edema",
         "CHF"

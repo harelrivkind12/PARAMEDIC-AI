@@ -1,6 +1,6 @@
-from pydantic_settings import BaseSettings, SettingsConfigDict
 from functools import lru_cache
-
+from pydantic import SecretStr
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     """
@@ -8,24 +8,25 @@ class Settings(BaseSettings):
     Values are loaded from environment variables and a .env file.
     """
     # App Settings
-    app_name: str = "BasketballAI"
+    app_name: str = "ParamedicAI"
     debug: bool = True
 
     # OpenAI Settings
-    # the key is mandatory
-    openai_api_key: str
+    # Using SecretStr prevents the key from being accidentally printed in logs
+    openai_api_key: SecretStr
     model_name: str = "gpt-4o"
 
-    # Configuration for loading the environment data, prefix to prevent from global collisions that might happen
+    # Configuration for loading the environment data
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
-        env_prefix="BA_"
+        env_prefix="BA_",
+        extra="ignore"  # Safely ignore extra env vars that don't match our model
     )
 
 @lru_cache
-def get_settings():
+def get_settings() -> Settings:
     """
-    ensures the Settings will be created once and only when the get_settings function is called and not automatically
+    Ensures the Settings instance is created only once (Singleton pattern).
     """
     return Settings()

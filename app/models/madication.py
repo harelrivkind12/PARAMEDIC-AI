@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from typing import Any, Literal
+from typing import Any
 from pydantic import BaseModel, Field, model_validator, ValidationInfo
 
 # Ensure the JSON file is actually located in the 'protocols' directory!
@@ -77,7 +77,6 @@ class MedicationCommand(BaseModel):
         active_flags = context.get("active_clinical_flags", [])
 
         # 4. Enforce contraindications based on clinical flags
-        # Cross-reference active patient flags with the medication's prohibited flags in the JSON
         for flag in drug_rules.get("contraindications_flags", []):
             if flag in active_flags:
                 raise ValueError(
@@ -85,18 +84,24 @@ class MedicationCommand(BaseModel):
                     f"due to active clinical condition: '{flag}'."
                 )
 
-        # 5. Validate upper dosage limit (prevent lethal adult doses in pediatric patients)
+        # 5. Validate upper dosage limit with strict pediatric rules
         max_allowed_dose = drug_rules["max_single_dose"]
         
-        # Calculate specific pediatric adjustment if the patient is a child (< 18) and weight is available
-        if patient_age is not None and patient_age < 18 and patient_weight is not None:
-            # Example pediatric rule of thumb: limit max dose relative to weight for specific ALS drugs
-            # (If needed, the JSON can be expanded to hold a dedicated 'mg_per_kg_max' field)
-            if self.name in ["Fentanyl", "Ketamine", "Midazolam"]:
-                calculated_peds_max = max_allowed_dose * (patient_weight / 70.0)
-                # Logical lower bound to avoid zeroing out the dose, while preventing a full adult dose for a toddler
-                max_allowed_dose = min(max_allowed_dose, max(calculated_peds_max, max_allowed_dose * 0.2))
+        # Execute pediatric specific hard boundaries if patient is under 18
+        if patient_age is not None and patient_age < 18:
+            # Check pediatric approval flag
+            if not drug_rules.get("is_pediatric_approved", False):
+                raise ValueError(
+                    f"PROHIBITED MEDICATION: {self.name} is strictly contraindicated for pediatric patients."
+                )
+            
+            # Calculate strict weight-based absolute ceiling if weight parameters are available
+            if patient_weight is not None and "max_dose_per_kg" in drug_rules:
+                calculated_peds_max = drug_rules["max_dose_per_kg"] * patient_weight
+                # The ceiling is either the calculated peds max or the absolute adult max (whichever is lower)
+                max_allowed_dose = min(max_allowed_dose, calculated_peds_max)
 
+        # Final check against the resolved threshold
         if self.dose > max_allowed_dose:
             raise ValueError(
                 f"DOSAGE OVERLOAD: {self.dose} {self.unit} exceeds the maximum safe single dose "
