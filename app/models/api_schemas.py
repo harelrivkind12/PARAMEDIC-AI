@@ -22,6 +22,16 @@ class IncidentState(BaseModel):
         ...,
         description="Current vital signs of the patient, crucial for assessing their condition and guiding treatment decisions."
     )
+
+    baseline_vitals: Vitals | None = Field(
+        default=None,
+        description="Initial vital signs recorded upon first patient contact (optional)."
+    )
+    
+    administered_treatments: list[str] = Field(
+        default_factory=list,
+        description="Chronological list of treatments already administered (e.g., 'Ketamine 50mg IV at 14:05')."
+    )
     
     # Additional fields can be added here as needed, such as:
     incident_type: str | None = Field(
@@ -74,7 +84,7 @@ class IncidentState(BaseModel):
                     ))
 
         # 2. Vascular Access Protocol (ALS Rule)
-        # אם אין גישה ורידית אבל היו 2 ניסיונות או יותר - מקפיצים התראת פרוטוקול
+        # If there is no venous access but there have been 2 or more attempts - a protocol alert is raised.
         if self.vascular_access_established is None and self.iv_attempts >= 2:
             vitals.clinical_flags.append(ClinicalFlag(
                 name="IV FAILURE PROTOCOL: 2 failed peripheral attempts. Establish IO immediately.",
